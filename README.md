@@ -1,11 +1,10 @@
 create a Google Cloud Function running this command in the same line:
 ```
-gcloud functions deploy telegram_bot --set-env-vars "TELEGRAM_TOKEN=6077821786:AAG59BKb2tGylC9knGY1_fRBHnuQQnstZJk
-" --runtime python39 --trigger-http --project=sample-bot-382120 
+gcloud functions deploy telegram_bot --set-env-vars "TELEGRAM_TOKEN=6077821786:AAG59BKb2tGylC9knGY1_fRBHnuQQnstZJk" --runtime python39 --trigger-http --project=sample-bot-382120 --region=central1-a
 ```
 you can also specify the region by appending the following string to the previous command
 ```
---region=<region_name>
+
 ```
 [list of the available regions](https://cloud.google.com/compute/docs/regions-zones)
 
@@ -19,5 +18,5 @@ The above command will return something like this:
   
 Step three, you need to set up your Webhook URL using this API call:
 ```
-curl "https://api.telegram.org/bot<TELEGRAM_TOKEN>/setWebhook?url=<URL>"
+curl "https://api.telegram.org/bot6077821786:AAG59BKb2tGylC9knGY1_fRBHnuQQnstZJk/setWebhook?url=https://us-central1-sample-bot-382120.cloudfunctions.net/telegram_bot"
 ```
