@@ -15,5 +15,5 @@ The above command will return something like this:
 Step three, you need to set up your Webhook URL using this API call:
 
 ``` shell
-curl "https://api.telegram.org/bot6077821786:AAG59BKb2tGylC9knGY1_fRBHnuQQnstZJk/setWebhook?url=https://central1-a-sample-bot-382120.cloudfunctions.net/telegram_bot"
+curl "https://api.telegram.org/bot6077821786:AAG59BKb2tGylC9knGY1_fRBHnuQQnstZJk/setWebhook?url=https://us-central1-sample-bot-382120.cloudfunctions.net/telegram_bot"
 ```
