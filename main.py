@@ -16,5 +16,5 @@ def telegram_bot(request):
             rand_line = linecache.getline('sources/phrases.txt', rand_line_num).strip()
             bot.sendMessage(chat_id=chat_id, text=rand_line)
         if update.message.text == "/labaz":
-            bot.sendMessage(chat_id=chat_id, text=f"Поздравляю, {update.message.chat.username}, Вы настоящий лабазер!")
+            bot.sendMessage(chat_id=chat_id, text=f"Поздравляю, @{update.message.chat.username}, Вы настоящий лабазер!")
     return "okay"
